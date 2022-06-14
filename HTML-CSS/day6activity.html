@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <h2>Form</h2>
+    </head>
+    <form>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td><input type = "text" name = "n1" /></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type ="password" name ="n2" /></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" id="Male" name ="gender" value="male"> 
+                    <label for="Male">Male</label>
+                    <input type="radio" id="Female" name="gender" value="female">
+                    <label for="Female">Female</label><br></td>
+            </tr>
+            <tr>
+                <td>Skills:</td>
+                <td><input type="checkbox" id="C" name ="language" value="C"> 
+                    <label for="C">C</label>
+                    <input type="checkbox" id="Java" name="language" value="Java">
+                    <label for="Java">Java</label>
+                    <input type="checkbox" id="JavaScript" name ="language" value="JavaScript"> 
+                    <label for="JavaScript">JavaScript</label></td>
+            </tr>
+            <tr>
+                <td>Select your highest level of completed education:</td>
+                <td><select name="quals" id="quals">
+                    <option value="High School Degree">High School Degree</option>
+                    <option value="Associate's">Associate Degree</option>
+                    <option value="Bachelor's">Bachelor's Degree</option>
+                    <option value="Master's">Master's Degree</option>
+                    <option value="Doctorate">Doctorate Degree</option>
+                    <option value="n/a">None of the above</option>
+                  </select></td>
+            </tr>
+            <tr>
+                <td>Date of Birth: </td>
+                <td><input type="date" id="birthday" name="birthday"></td>
+            </tr>
+    </table>
+        <br />
+        <input type = "submit" id="register" value = "Register" />
+        <input type = "submit" id="reset" value = "Reset" />
+
+    </form>
+</html>
