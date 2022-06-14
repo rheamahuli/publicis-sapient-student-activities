@@ -1,0 +1,20 @@
+.top_box {
+    border: 2px solid red;
+    width: 417px;
+}
+.left_box {
+    border: 2px solid red;
+    width: 100px;
+}
+.center_box {
+    border: 2px solid red;
+    width: 200px;
+}
+.right_box {
+    border: 2px solid red;
+    width: 100px;
+}
+.bottom_box {
+    border: 2px solid red;
+    width: 417px;
+}
