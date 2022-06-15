@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <h2>Form Validation</h2>
+    </head>
+    <body>
+    <form name='login' action='registered.html' method='POST' onsubmit="return handleSubmit()">
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type = "text" name = "n1" /></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type = "text" name = "n2" /></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><input type="radio" id="Male" name ="gender" value= true> 
+                    <label for="Male">Male</label>
+                    <input type="radio" id="Female" name="gender" value=true>
+                    <label for="Female">Female</label><br></td>
+            </tr>
+            <tr>
+                <td>Skills:</td>
+                <td><input type="checkbox" id="C" name ="language" value="C"> 
+                    <label for="C">C</label>
+                    <input type="checkbox" id="Java" name="language" value="Java">
+                    <label for="Java">Java</label>
+                    <input type="checkbox" id="JavaScript" name ="language" value="JavaScript"> 
+                    <label for="JavaScript">JavaScript</label></td>
+            </tr>
+            <tr>
+                <td>Select your highest level of completed education:</td>
+                <td><select name="quals" id="quals">
+                    <option value="High School Degree">High School Degree</option>
+                    <option value="Associate's">Associate Degree</option>
+                    <option value="Bachelor's">Bachelor's Degree</option>
+                    <option value="Master's">Master's Degree</option>
+                    <option value="Doctorate">Doctorate Degree</option>
+                    <option value="n/a">None of the above</option>
+                  </select></td>
+            </tr>
+            <tr>
+                <td>Date of Birth: </td>
+                <td><input type="date" id="birthday" name="birthday"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type ="password" name ="p1" /></td>
+            </tr>
+            <tr>
+                <td>Confirm Password:</td>
+                <td><input type ="password" name ="p2" /></td>
+            </tr>
+        </table>
+            <br />
+            <input type = "submit" id="register" value = "Register" />
+
+    </form>
+    <script type='text/JavaScript'>
+        function handleSubmit() {
+            let input = document.login;
+            let firstName = input.n1;
+            let lastName = input.n2;
+            let male = input.Male;
+            let female = input.Female;
+            let pass1 = input.p1;
+            let pass2 = input.p2;
+            if(firstName.value.length < 3) {
+                alert('First name must be at least 3 characters.');
+                return false;
+            }
+            if(lastName.value.length < 2) {
+                alert('Last name must be at least 2 characters.');
+                return false;
+            }
+            if(pass1.value != pass2.value) {
+                alert('Passwords do not match');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
