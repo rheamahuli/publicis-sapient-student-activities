@@ -74,6 +74,10 @@
                 alert('Last name must be at least 2 characters.');
                 return false;
             }
+            if(!login.gender.value) {
+                alert('Gender not selected.');
+                return false;
+            }
             if(pass1.value != pass2.value) {
                 alert('Passwords do not match');
                 return false;
