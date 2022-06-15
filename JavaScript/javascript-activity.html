@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Demo on Javascript</h1>
+    <h3>Using a for loop: </h3>
+    <script type ="text/javascript">
+        var firstname = "Rhea";
+        var age = 21;
+        for(var v=0; v<10; v++) {
+            var x=2; <!-- you can use 'let' instead of var, but not accessible outside the scope -->
+            if((v % x) == 0) {
+                document.write('<p>v= '+v+'</p>'); 
+                <!-- you can use v or window.v -->
+            }
+        }
+        document.write('<p>Value of window.x: '+window.x+'</p>')
+    </script>
+    <h3>Iterating through an array: </h3>
+    <script type ="text/javascript">
+        let items = [1,2,3,4,5];
+        for(let index=0; index<items.length; index++) {
+            document.write('<p> Item # is: '+items[index]+'</p>');
+        }
+    </script>
+    <h3>Function demo:</h3>
+    <script type ="text/javascript">
+        let user1 = {name : "Rhea", age : 21};
+        document.write('<p>Name = '+user1.name+', Age = '+user1.age+'</p>');
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        let user2 = new Person('Ramya', 20);
+        document.write('<p>Name = '+user2.name+', Age = '+user2.age+'</p>');
+    </script>
+    <h3>Items demo:</h3>
+    <script type ="text/javascript">
+        let people = [
+            {name : 'Rhea', age: 21},
+            {name : 'Ramya', age: 20},
+            {name : 'Anand', age: 21},
+        ]
+        for(let i=0; i<people.length; i++) {
+            document.write('<p>Person: '+people[i].name+', Age: '+people[i].age+'</p>');
+        }
+    </script>
+    <h3>Events demo: </h3>
+    <input type = "text" id = "i1">
+    <button onclick = "handleClick()">Enter</button>
+    <div id = "i2"> Name is: </div>
+    <script type ="text/javascript">
+        function handleClick(e) {
+            console.log(e)
+            let ele = document.getElementById("i1"); <!-- accessing the element by id-->
+            console.log(ele.value); <!--will tell you value of element, can also do just ele-->
+            let ele2 = document.getElementById('i2');
+            ele2.innerHTML = ele2.innerHTML + '<b>'+ele.value+'</b>';
+        }
+    </script>
+    <h3>Range bars demo: </h3>
+    <input type = "range" min = "0" max = "255" oninput="handleInput()">
+    <span id = "s1"></span>
+    <script type = "text/javascript">
+        function handleInput(e) {
+            let ele = document.getElementById("s1");
+            let rangerBarValue = ele.value;
+            document.getElementById('s1').innerHTML = rangerBarValue;
+        }
+    </script>
+    
+
+</body>
+</html>
